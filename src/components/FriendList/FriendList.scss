@@ -1,0 +1,24 @@
+.friend-list {
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  padding: 10px;
+}
+
+.avatar {
+  margin-right: 20px;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
+
+.status {
+  padding: 10px;
+}

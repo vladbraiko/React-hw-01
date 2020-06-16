@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-course/homework-01/static/css/main.f6d9db5a.chunk.css",
+    "main.js": "/React-course/homework-01/static/js/main.f136d7fd.chunk.js",
+    "main.js.map": "/React-course/homework-01/static/js/main.f136d7fd.chunk.js.map",
+    "runtime-main.js": "/React-course/homework-01/static/js/runtime-main.c2185942.js",
+    "runtime-main.js.map": "/React-course/homework-01/static/js/runtime-main.c2185942.js.map",
+    "static/js/2.07622032.chunk.js": "/React-course/homework-01/static/js/2.07622032.chunk.js",
+    "static/js/2.07622032.chunk.js.map": "/React-course/homework-01/static/js/2.07622032.chunk.js.map",
+    "index.html": "/React-course/homework-01/index.html",
+    "precache-manifest.0cf9c19d125050d2fbc34ce484b45e74.js": "/React-course/homework-01/precache-manifest.0cf9c19d125050d2fbc34ce484b45e74.js",
+    "service-worker.js": "/React-course/homework-01/service-worker.js",
+    "static/css/main.f6d9db5a.chunk.css.map": "/React-course/homework-01/static/css/main.f6d9db5a.chunk.css.map",
+    "static/js/2.07622032.chunk.js.LICENSE.txt": "/React-course/homework-01/static/js/2.07622032.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2185942.js",
+    "static/js/2.07622032.chunk.js",
+    "static/css/main.f6d9db5a.chunk.css",
+    "static/js/main.f136d7fd.chunk.js"
+  ]
+}
