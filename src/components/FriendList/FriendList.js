@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FriendListItem } from "../FriendListItem/FriendListItem";
 
 function FriendList({ friends }) {
   const list = friends.map((item) => {
@@ -17,24 +18,8 @@ function FriendList({ friends }) {
   return <ul className="friend-list">{list}</ul>;
 }
 
-function FriendListItem({ avatar, name, isOnline }) {
-  return (
-    <li className="item">
-      <span className={isOnline ? "status online" : "status offline"}>O</span>
-      <img className="avatar" src={avatar} alt="" width="48" />
-      <p className="name">{name}</p>
-    </li>
-  );
-}
-
 FriendList.propTypes = {
   friends: PropTypes.array,
-};
-
-FriendListItem.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
 };
 
 export { FriendList };

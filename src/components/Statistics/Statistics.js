@@ -22,7 +22,11 @@ function Statistics({ title, stats }) {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.exact({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }),
 };
 
 export { Statistics };
