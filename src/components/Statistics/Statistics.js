@@ -22,7 +22,7 @@ function Statistics({ title, stats }) {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.exact({
+  stats: PropTypes.arrayOf({
     id: PropTypes.string,
     label: PropTypes.string,
     percentage: PropTypes.number,
