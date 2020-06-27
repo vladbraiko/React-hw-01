@@ -1,17 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { TransactionHistoryItem } from "./TransactionsItem";
 
 function TransactionHistory({ transactions }) {
-  const result = transactions.map((item) => {
-    return (
-      <tr key={item.id}>
-        <td>{item.type}</td>
-        <td>{item.amount}</td>
-        <td>{item.currency}</td>
-      </tr>
-    );
-  });
-
   return (
     <table className="transaction-history">
       <thead className="head">
@@ -22,13 +13,15 @@ function TransactionHistory({ transactions }) {
         </tr>
       </thead>
 
-      <tbody>{result}</tbody>
+      <tbody>
+        <TransactionHistoryItem transactions={transactions} />
+      </tbody>
     </table>
   );
 }
 
 TransactionHistory.propTypes = {
-  transactions: PropTypes.array,
+  transactions: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
 };
 
 export { TransactionHistory };
