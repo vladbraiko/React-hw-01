@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { exact } from "prop-types";
 
 function Profile(props) {
   const { name, tag, location, avatar, stats } = props;
@@ -35,7 +35,11 @@ Profile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.objectOf(PropTypes.number),
+  stats: exact({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
 };
 
 export { Profile };

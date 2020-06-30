@@ -1,26 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { exact } from "prop-types";
 import { FriendListItem } from "../FriendListItem/FriendListItem";
 
 function FriendList({ friends }) {
-  const list = friends.map((item) => {
-    return (
-      <FriendListItem
-        avatar={item.avatar}
-        name={item.name}
-        isOnline={item.isOnline}
-        id={item.id}
-        key={item.id}
-      />
-    );
-  });
-
-  return <ul className="friend-list">{list}</ul>;
+  return (
+    <ul className="friend-list">
+      {friends.map((item) => (
+        <li key={item.id} className="item">
+          <FriendListItem
+            avatar={item.avatar}
+            name={item.name}
+            isOnline={item.isOnline}
+          />
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
-    PropTypes.exact({
+    exact({
       avatar: PropTypes.string,
       name: PropTypes.string,
       isOnline: PropTypes.bool,

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { shape } from "prop-types";
 import { TransactionHistoryItem } from "./TransactionsItem";
 
 function TransactionHistory({ transactions }) {
@@ -14,14 +14,26 @@ function TransactionHistory({ transactions }) {
       </thead>
 
       <tbody>
-        <TransactionHistoryItem transactions={transactions} />
+        {transactions.map((item) => (
+          <tr key={item.id}>
+            <TransactionHistoryItem
+              type={item.type}
+              amount={item.amount}
+              currency={item.currency}
+            />
+          </tr>
+        ))}
       </tbody>
     </table>
   );
 }
 
 TransactionHistory.propTypes = {
-  transactions: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  transactions: PropTypes.arrayOf(
+    shape({
+      id: PropTypes.string,
+    }).isRequired
+  ),
 };
 
 export { TransactionHistory };

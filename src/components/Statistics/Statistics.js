@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { exact } from "prop-types";
 
 function Statistics({ title, stats }) {
   const list = stats.map((item) => {
@@ -23,7 +23,7 @@ function Statistics({ title, stats }) {
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-    PropTypes.exact({
+    exact({
       id: PropTypes.string,
       label: PropTypes.string,
       percentage: PropTypes.number,
